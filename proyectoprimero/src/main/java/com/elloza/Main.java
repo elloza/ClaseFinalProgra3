@@ -10,6 +10,13 @@ public class Main {
      * @param args
      */
     public static void main(String[] args) {
-        System.out.println("Hello world!");
+        String persona1String = "John Doe, 30";
+        String persona2String = "Jane Smith,28";
+        
+        Persona persona1 = Persona.fromString(persona1String, ",");
+        Persona persona2 = Persona.fromString(persona2String, ",");
+        
+        System.out.printf("Nombre: %s, Edad: %d%n", persona1.getNombre(), persona1.getEdad());
+        System.out.printf("Nombre: %s, Edad: %d%n", persona2.getNombre(), persona2.getEdad());
     }
 }
